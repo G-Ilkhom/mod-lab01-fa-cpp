@@ -48,8 +48,7 @@ unsigned int faStr2(const char *str) {
 
             if (isupper(*str)) {
                 first_upper = true;
-            } 
-            else {
+            } else {
                 first_upper = false;
             }
 
