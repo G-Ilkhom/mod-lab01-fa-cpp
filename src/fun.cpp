@@ -13,14 +13,12 @@ unsigned int faStr1(const char *str) {
         if (!isspace(*str) && !inside_word) {
             inside_word = true;
             has_digit = false;
-        }
-        else if (isspace(*str) && inside_word) {
+        } else if (isspace(*str) && inside_word) {
             if (!has_digit) {
                 word_count++;
             }
             inside_word = false;
-        }
-        else if (isdigit(*str) && inside_word) {
+        } else if (isdigit(*str) && inside_word) {
             has_digit = true;
         }
         str++;
@@ -50,16 +48,14 @@ unsigned int faStr2(const char *str) {
 
             if (isupper(*str)) {
                 first_upper = true;
-            }
+            } 
             else {
                 first_upper = false;
             }
 
-        }
-        else if (isspace(*str) && inside_word) {
+        } else if (isspace(*str) && inside_word) {
             inside_word = false;
-        }
-        else if (!islower(*str) && inside_word) {
+        } else if (!islower(*str) && inside_word) {
             all_lower_after_first = false;
         }
 
@@ -82,11 +78,9 @@ unsigned int faStr3(const char *str) {
             word_count++;
             total_length++;
             inside_word = true;
-        }
-        else if (*str != ' ' && inside_word == true) {
+        } else if (*str != ' ' && inside_word == true) {
             total_length++;
-        }
-        else if (*str == ' ' && inside_word == true) {
+        } else if (*str == ' ' && inside_word == true) {
             inside_word = false;
         }
         str++;
